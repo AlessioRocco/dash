@@ -40,10 +40,10 @@
       become: yes
       become_method: sudo
 
-    - name: Create dev resolver file at /etc/resolver/dev
+    - name: Create docker resolver file at /etc/resolver/docker
       file:
         src: "{{ dev_env_dir }}/ansible/resolver-dev.conf"
-        dest: /etc/resolver/dev
+        dest: /etc/resolver/docker
         state: link
         force: yes
       become: yes
